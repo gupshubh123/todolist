@@ -20,7 +20,7 @@
   display: flex;
 }
 .add_todo{
-  margin: auto;
+  margin: 0 !important;
 }
 .page_header{
   display: flex;
@@ -37,7 +37,7 @@
   border-radius: 2px;
   color: white;
   background: #ec7063;
-  margin-left: 5px;
+  margin-right: 10px;
   width: 115px;
   transition: all 0.4s ease-out;
 }
@@ -60,18 +60,19 @@
   border: 0.25px solid #efefef;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
 }
 .empty_list_container img{
-  width: 125px;
+  width: 120px;
 }
 .task_list_stats{
   font-size: 18px;
-  margin-bottom: 10px;
+  margin: 10px 15px;
 }
 .task_list_stats .stat{
   display: inline-block;
     padding: 6px 15px;
-    margin-right: 20px;
+    margin-right: 12px;
     font-size: 13px;
     border-radius: 5px;
 }
@@ -103,6 +104,9 @@
 .render_list .highlight_hashtag{
   color: #1da1f2;
   font-style: italic;
+}
+.list-group.render_list_ul{
+  margin: 0 15px;
 }
 .App-link {
   color: #61dafb;

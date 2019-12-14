@@ -49,7 +49,7 @@ const Todolist=(props) =>{
                     {'Completed: '+itemsListCompleted.length}
                 </div>
             </div>
-            <ul className="list-group">
+            <ul className="list-group render_list_ul">
                 {itemsListPending}
                 {itemsListCompleted}
             </ul>

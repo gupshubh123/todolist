@@ -7,8 +7,6 @@ function EmptyList() {
             <img src={EmptyListIcon} alt="Empty list" />
             <div className="empty_list_text">
                 No tasks for display
-                <br />
-                You are all done for the day! 
                 <ul>
                     <li>Add tasks</li>
                     <li> Use <i>#hashtag(s)</i> in your tasks </li>

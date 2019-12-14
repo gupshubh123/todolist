@@ -65,13 +65,13 @@ class App extends Component {
         <main  className="container todo_container">
         
             <div className="row add_todo">
-              <div className="input-group mb-3 col-sm-9">
+              <div className="input-group mb-3 col-sm-12 col-xs-12 col-md-8">
                   <div className="input-group-prepend">
                     <span className="input-group-text" id="basic-addon1">Add Task</span>
                   </div>
                   <input type="text" className="form-control" placeholder="Enter text with hashtag(s)" onKeyDown={this.addTodoItemHandler}/>
               </div>
-              <div className="col-sm-3">
+              <div className="col-sm-12 col-xs-12 col-md-4">
                   <button onClick={this.resetListHandler} className="btn custom_btn_reset">Reset list</button>
                   <button onClick={this.resetTagFilters} className="btn custom_btn_reset">Reset Filters</button>
               </div>
