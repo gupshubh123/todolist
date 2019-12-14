@@ -38,8 +38,16 @@ const Todolist=(props) =>{
     })
     return (
         <div className="render_list">
-            <div className="task_list_heading">
-                Your Task List: 
+            <div className="task_list_stats">
+                <div className="stat all_tasks">
+                    {'All: '+Number(itemsListPending.length+itemsListCompleted.length)}
+                </div>
+                <div className="stat pending_tasks">
+                    {'Pending: '+itemsListPending.length}
+                </div>
+                <div className="stat completed_tasks">
+                    {'Completed: '+itemsListCompleted.length}
+                </div>
             </div>
             <ul className="list-group">
                 {itemsListPending}

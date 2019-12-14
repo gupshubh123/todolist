@@ -9,7 +9,11 @@ function EmptyList() {
                 No tasks for display
                 <br />
                 You are all done for the day! 
-                
+                <ul>
+                    <li>Add tasks</li>
+                    <li> Use <i>#hashtag(s)</i> in your tasks </li>
+                    <li> Click <i>#hashtag(s)</i> to filter the tasks</li>
+                </ul>
             </div>
         </div>
     )

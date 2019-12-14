@@ -64,18 +64,41 @@
 .empty_list_container img{
   width: 125px;
 }
-.task_list_heading{
-  font-size: 20px;
+.task_list_stats{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.task_list_stats .stat{
+  display: inline-block;
+    padding: 6px 15px;
+    margin-right: 20px;
+    font-size: 13px;
+    border-radius: 5px;
+}
+.task_list_stats .all_tasks{
+  background: #d9f8ff;
+    border: 0.5px solid #69e3ff;
+}
+.task_list_stats .pending_tasks{
+  background: #fff8ea;
+  border: 0.5px solid #f5d199
+}
+.task_list_stats .completed_tasks{
+  background: #e3ffe7;
+  border: 0.5px solid #80ff92;
 }
 .render_list .todo_item_pending{
-cursor: pointer;
+  background: #fff8ea;
+  cursor: pointer;
+  border-radius: 0 !important;
 }
 .render_list .todo_item_pending:hover{
   background-color: #b2e0b2;
 }
 .render_list .todo_item_completed{
-  pointer-events: none;
-  background: #e3ffe7
+  cursor: pointer;
+  background: #e3ffe7;
+  border-radius: 0 !important;
 }
 .render_list .highlight_hashtag{
   color: #1da1f2;

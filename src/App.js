@@ -69,7 +69,7 @@ class App extends Component {
                   <div className="input-group-prepend">
                     <span className="input-group-text" id="basic-addon1">Add Task</span>
                   </div>
-                  <input type="text" className="form-control" placeholder="Start typing to add your task" onKeyDown={this.addTodoItemHandler}/>
+                  <input type="text" className="form-control" placeholder="Enter text with hashtag(s)" onKeyDown={this.addTodoItemHandler}/>
               </div>
               <div className="col-sm-3">
                   <button onClick={this.resetListHandler} className="btn custom_btn_reset">Reset list</button>
