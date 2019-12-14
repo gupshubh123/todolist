@@ -12,22 +12,89 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flexContainer{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  flex-direction: column;
+}
+.add_todo{
+  margin: auto;
+}
+.page_header{
+  display: flex;
+  font-size: 22px;
+  height: 70px;
+  color: white;
+  text-align: center;
+  background: #563d7c;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
+.btn.custom_btn_reset{
+  text-transform: capitalize;
+  border-radius: 2px;
+  color: white;
+  background: #ec7063;
+  margin-left: 5px;
+  width: 115px;
+  transition: all 0.4s ease-out;
+}
+.btn.custom_btn_reset:hover{
+  background: #dc6b5f;
+  box-shadow: 2px 2px 4px #a78f8f;
+  color: white;
+  transform: scale(1.01);
+}
+.todo_container{
+  padding:30px 0px;
+}
+.row.tag_filter_ctn{
+  position: relative;
+  margin: 10px 0px;
+  
+}
+.empty_list_container{
+  height: 200px;
+  border: 0.25px solid #efefef;
+  align-items: center;
+  justify-content: center;
+}
+.empty_list_container img{
+  width: 125px;
+}
+.task_list_heading{
+  font-size: 20px;
+}
+.render_list .todo_item_pending{
+cursor: pointer;
+}
+.render_list .todo_item_pending:hover{
+  background-color: #b2e0b2;
+}
+.render_list .todo_item_completed{
+  pointer-events: none;
+  background: #e3ffe7
+}
+.render_list .highlight_hashtag{
+  color: #1da1f2;
+  font-style: italic;
+}
 .App-link {
   color: #61dafb;
 }
-
+.tag{
+  margin-left: 10px;
+    color: white;
+    display: inline-block;
+    background: #f1c40f;
+    border: 0.5px solid #ffc107;
+    padding: 5px;
+    border-radius: 33px;
+    position: relative;
+    top: -4px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
