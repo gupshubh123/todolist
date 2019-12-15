@@ -14,19 +14,23 @@ class App extends Component {
     }
   }
   resetListHandler=()=>{
+     // resets the complete list
     this.setState({listPending:[],listCompleted:[],tagList:[]},()=>{
       this.saveStateLocal()  
     })
   }
   resetTagFilters=()=>{
+    //resets the hashtag filters appplied
     this.setState({tagList:[]},()=>{})
   }
 
   highlightHashTags=(s)=>{
+    //macthes the pattern for #hashtag and replaces it with span
     let reg = new RegExp(/(^|\B)#(?![0-9_]+\b)([a-zA-Z0-9_]{1,30})(\b|\r)/, 'gi')
      return s.replace(reg, (str) =>'<span class="highlight_hashtag">'+str+'</span>')
   }
   addTodoItemHandler=(e)=>{
+    //adds a new pending item to list, saves in localstorage
     if (e.key === 'Enter' && e.target.value.length) {
       let item = this.highlightHashTags(e.target.value)
       let templist = [...this.state.listPending]
@@ -39,6 +43,7 @@ class App extends Component {
     }
   }
   saveStateLocal=(state)=>{
+    //saves the list items in local storage
     let todoList={
       listPending:this.state.listPending,
       listCompleted:this.state.listCompleted
@@ -46,6 +51,7 @@ class App extends Component {
     localStorage.setItem("todoList",JSON.stringify(todoList));
   }
   markItemCompletedHandler=(index)=>{
+    //removes the items from the pending list, moves to completed
     let todoPendingList = [...this.state.listPending]
     let todoCompletedList = [...this.state.listCompleted]
     let itemToBeMarkedCompleted = todoPendingList[index]
@@ -91,6 +97,7 @@ class App extends Component {
     )
   }
   hashTagClicked=()=>{
+    //adding event listners to span hashtags
     let component_this = this
     var hashTagLinks = document.querySelectorAll('.highlight_hashtag')
     for (let i = 0; i < hashTagLinks.length; i++) {

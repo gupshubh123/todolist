@@ -1,5 +1,9 @@
 import React from 'react'
+/*
+    Acccepts Pending and Completed task items. Filters, if applied , only renders the filtered list.
+    Pending Task list is shown in reverse order as per the requirement.
 
+*/
 const Todolist=(props) =>{
     let filterByTags=props.filters
     let hasFilters = filterByTags.length?true:false

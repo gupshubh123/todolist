@@ -1,5 +1,7 @@
 import React from 'react'
-
+/*
+Shows filters in the form of tags
+*/
 const Filterlist=(props)=> {
     let filterList = props.filters
     return (
